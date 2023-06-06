@@ -4,7 +4,7 @@
 <p align="center"><img src="https://github.com/BaxDailyGit/GasGuard/assets/99312529/94feafd5-b3c9-4517-a5a7-7616e6c1dedc" width="40%" height="40%" align=center></p>  
 
 <div align=center>    
-구현한 모습  
+구현한 모습 (좀더 이쁘게 찍자;;)
 </div>
 
 #### 가스 센서값에 따른 LED(빨,노,초)제어
