@@ -1,7 +1,8 @@
 # GasGuard
 ### Safe and Reliable Gas leakage Detedtion Sytem
 #### 시스템프로그래밍및실습 팀프로젝트이다. SPI, I2C, PWM, GPIO 중 적어도 2개는 wiringpi 사용없이 구현할 예정이다.
-
+<p align="center"><img src="https://github.com/BaxDailyGit/GasGuard/assets/99312529/94feafd5-b3c9-4517-a5a7-7616e6c1dedc" width="40%" height="40%"></p>  
+##### 구현한 모습
 
 #### 가스 센서값에 따른 LED(빨,노,초)제어
 ```shell
