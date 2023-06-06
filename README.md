@@ -3,6 +3,8 @@
 #### 시스템프로그래밍및실습 팀프로젝트이다.
 #### SPI, I2C, PWM, GPIO 중 적어도 2개는 wiringpi 사용없이 구현할 예정이다.
 
+
+가스 센서값에 따른 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -98,7 +100,7 @@ void control_leds(int gas_concentration)
     fclose(gpio_value_file);
 
     // Determine which LED to turn on based on gas concentration
-    if (gas_concentration <= 400)
+    if (gas_concentration >=701 && gas_concentration <= 1023)
     {
         sprintf(gpio_value, "/sys/class/gpio/gpio%d/value", led1_pin);
         gpio_value_file = fopen(gpio_value, "w");
@@ -109,7 +111,7 @@ void control_leds(int gas_concentration)
 
         fclose(gpio_value_file);
     }
-    else if (gas_concentration <= 700)
+    else if ( gas_concentration >=401 && gas_concentration <= 700 )
     {
         sprintf(gpio_value, "/sys/class/gpio/gpio%d/value", led2_pin);
         gpio_value_file = fopen(gpio_value, "w");
@@ -120,7 +122,7 @@ void control_leds(int gas_concentration)
 
         fclose(gpio_value_file);
     }
-    else if (gas_concentration <= 1023)
+    else if (gas_concentration <=400 )
     {
         sprintf(gpio_value, "/sys/class/gpio/gpio%d/value", led3_pin);
         gpio_value_file = fopen(gpio_value, "w");
