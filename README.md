@@ -4,6 +4,11 @@
 
 
 #### 가스 센서값에 따른 LED(빨,노,초)제어
+```shell
+$ echo 17 > /sys/class/gpio/export
+$ echo 18 > /sys/class/gpio/export
+$ echo 23 > /sys/class/gpio/export
+```
 ```c
 #include <stdio.h>
 #include <stdlib.h>
