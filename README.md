@@ -3,7 +3,10 @@
 #### 시스템프로그래밍및실습 팀프로젝트이다. SPI, I2C, PWM, GPIO 중 적어도 2개는 wiringpi 사용없이 구현한다.
 
 
-https://github.com/BaxDailyGit/GasGuard/assets/99312529/188078b8-3d8f-4ef6-9f56-9206d8cf719c
+
+https://github.com/BaxDailyGit/GasGuard/assets/99312529/1eeae39e-e93f-427a-b6e6-28bf2ead1c85
+
+
 
 <div >    
 구현한 모습 
