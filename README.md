@@ -9,7 +9,7 @@ https://github.com/BaxDailyGit/GasGuard/assets/99312529/1eeae39e-e93f-427a-b6e6-
 
 
 <div >    
-구현한 모습 
+본인 파트
 </div>
 
 #### 가스 센서값에 따른 LED(빨,노,초)제어
