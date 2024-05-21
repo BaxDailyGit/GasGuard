@@ -1,18 +1,35 @@
 # GasGuard
-### Safe and Reliable Gas leakage Detedtion Sytem
-#### 시스템프로그래밍및실습 팀프로젝트이다. SPI, I2C, PWM, GPIO 중 적어도 2개는 wiringpi 사용없이 구현한다.
+### 가스 누출 탐지 시스템 | 대학교 시스템프로그래밍및실습 팀프로젝트
 
 
+본 프로젝트의 목적은 I/O용 센서 디바이스 제어가 필요한 가스 누출 탐지 시스템을 RPi(Raspberry Pi) 환경에서 Sensor – Actuator를 관리하여 개발하는 것이다.
+4대의 RPi를 통해 구현하며 Linux의 functions을 활용하여 관련 기능들을 개발한다.
+
+
+
+## 개발 조건
+- RPi 기반의 시스템을 기반으로 하는 임베디드 프로그램 제안
+- RPi에서 Linux의 5 core functions (process, memory, file system, i/o, network
+management)를 활용하는 응용 프로그램 개발
+- 다수의 Sensor 사용
+- SPI, I2C, PWM, GPIO 중 적어도 2개는 wiringpi 사용없이 구현한다.
+
+
+## 결과
 
 https://github.com/BaxDailyGit/GasGuard/assets/99312529/1eeae39e-e93f-427a-b6e6-28bf2ead1c85
 
+### 사용한 센서 및 엑추에이터: 
+- 가스센서
+- RGB-LED
+- 스피커(부저)
+- LCD
 
 
-<div >    
-본인 파트
-</div>
+### 본인 파트
 
-#### 가스 센서값에 따른 LED(빨,노,초)제어
+- 가스 센서값에 따른 LED(빨,노,초)제어
+
 ```shell
 $ echo 17 > /sys/class/gpio/export
 $ echo 18 > /sys/class/gpio/export
