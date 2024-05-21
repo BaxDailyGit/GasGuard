@@ -57,29 +57,21 @@ https://github.com/BaxDailyGit/GasGuard/assets/99312529/1eeae39e-e93f-427a-b6e6-
 
 ### 본인 파트
 
-1. GPIO(General Purpose Input/Output) 제어
-   - LED를 제어하기 위해 Raspberry Pi의 GPIO 핀을 사용
-   - 사용한 GPIO 핀 번호: 17(빨간색 LED), 18(노란색 LED), 23(초록색 LED)
-   - GPIO 핀을 출력 모드로 설정하고, 해당 핀의 값을 제어하여 LED를 켜고 끄기
 
+1. GPIO 제어
+    - LED를 제어하기 위해 Raspberry Pi의 GPIO 핀을 사용
+    - GPIO 핀을 출력 모드로 설정하고, 해당 핀의 값을 제어하여 LED를 켜고 끄기
 2. 파일 I/O를 이용한 GPIO 제어
-   - Linux의 sysfs 인터페이스(/sys/class/gpio)를 통해 GPIO 핀을 제어
-   - /sys/class/gpio/export 파일에 GPIO 번호를 입력 -> 해당 핀이 export
-   - /sys/class/gpio/gpio{pin}/direction 파일에 "out"을 입력 -> 출력 모드로 설정
-   - /sys/class/gpio/gpio{pin}/value 파일에 0 또는 1을 써서 LED를 끄거나 켜기
-
+    - Linux의 sysfs 인터페이스(/sys/class/gpio)를 통해 GPIO 핀을 제어
 3. 소켓 프로그래밍을 통한 가스 센서 데이터 수신
-   - 서버로부터 TCP 소켓 통신을 통해 가스 센서 데이터를 수신
-   - 소켓 생성, 서버 주소 설정, 연결 후 read() 시스템 호출로 데이터를 수신
-   - 수신한 데이터를 정수형으로 변환하여 가스 농도 값 얻기
-
+    - 서버로부터 TCP 소켓 통신을 통해 가스 센서 데이터를 수신
+    - 소켓 생성, 서버 주소 설정, 연결 후 read() 시스템 호출로 데이터를 수신
+    - 수신한 데이터를 정수형으로 변환하여 가스 농도 값 얻기
 4. 가스 농도 범위에 따른 LED 제어 로직
-   - 서버로부터 수신한 가스 센서 값(0~1023 범위)에 따라 LED를 다르게 제어
-   - 가스 농도가 701~1023이면 빨간색 LED
-   - 가스 농도가 401~700이면 노란색 LED
-   - 가스 농도가 400 이하이면 초록색 LED
+    - 서버로부터 수신한 가스 센서 값(0~1023 범위)에 따라 LED를 다르게 제어
 
 
+## 코드
 
 
 ```shell
